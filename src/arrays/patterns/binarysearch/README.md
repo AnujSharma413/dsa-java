@@ -1,34 +1,142 @@
-# Binary Search – Basics
+# Binary Search Pattern (Aditya Verma)
 
-This folder contains the foundational implementation of Binary Search
-based on Aditya Verma’s Binary Search pattern.
+This folder contains a **complete collection of Binary Search problems**  
+implemented in Java, following the **Binary Search pattern taught by Aditya Verma**.
 
-The focus is on understanding:
-- Why binary search works
-- How search space is reduced
-- Correct loop conditions and boundaries
+The goal of this section is not just to write Binary Search code,  
+but to **master how to think in terms of search space reduction** and  
+apply Binary Search in multiple problem variations.
 
----
+* * *
 
-## Problem Covered
+## 📌 What This Folder Represents
 
-### 1. Binary Search (Classical)
+*   This is the **first major pattern** in the DSA journey
 
-Given a sorted array and a target value, return the index of the target
-if it exists, otherwise return -1.
+*   All problems are solved using **Binary Search logic**
 
----
+*   Each problem focuses on identifying:
 
-## Key Concepts
-- Binary search works on sorted data due to monotonic behaviour
-- Search space is reduced by half after every comparison
-- Proper mid calculation avoids integer overflow
-- Loop condition `low <= high` is critical to avoid missing elements
+    *   Sorted or monotonic behaviour
 
----
+    *   Correct search space
 
-## Complexity
-- Time Complexity: O(log n)
-- Space Complexity: O(1)
+    *   Boundary conditions
 
-This is **Lecture 1** of the Binary Search pattern series.
+    *   Variations of mid handling
+
+
+This folder builds the **foundation for advanced problem solving**.
+
+* * *
+
+## 📂 Problems Covered
+
+### 🔹 Basic Binary Search
+
+*   Binary Search (Classic)
+
+*   Binary Search on Reverse Sorted Array
+
+*   Binary Search when Order is Not Known
+
+
+### 🔹 First / Last Occurrence Variations
+
+*   First Occurrence of an Element
+
+*   Last Occurrence of an Element
+
+*   Count Occurrences in a Sorted Array
+
+
+### 🔹 Floor / Ceil / Closest Element
+
+*   Find Floor of an Element
+
+*   Find Ceil of an Element
+
+*   Minimum Difference Element in Sorted Array
+
+*   Next Greatest Letter
+
+
+### 🔹 Infinite & Special Arrays
+
+*   Search in Infinite Sorted Array
+
+*   Find First `1` in Infinite Binary Sorted Array
+
+
+### 🔹 Rotated & Nearly Sorted Arrays
+
+*   Search in Rotated Sorted Array
+
+*   Count Rotations in Sorted Rotated Array
+
+*   Search in Nearly Sorted Array
+
+
+### 🔹 Peak & Bitonic Arrays
+
+*   Find Peak Element
+
+*   Maximum Element in Bitonic Array
+
+*   Search in Bitonic Array
+
+
+* * *
+
+## 🧠 Key Learnings from This Pattern
+
+*   Binary Search works only when **search space is monotonic**
+
+*   Every Binary Search problem reduces to:
+
+    *   Defining correct `low` and `high`
+
+    *   Choosing correct condition to move left or right
+
+*   Mid calculation should avoid overflow:
+
+        mid = low + (high - low) / 2
+
+
+*   Loop condition `low <= high` is critical
+
+*   One wrong boundary can break the entire logic
+
+
+* * *
+
+## ⏱️ Time & Space Complexity
+
+*   **Time Complexity:** O(log n)
+
+*   **Space Complexity:** O(1)
+
+
+(All solutions are iterative and optimized)
+
+* * *
+
+## 📚 Learning Source
+
+All problems in this folder are practiced and implemented based on  
+**Aditya Verma’s Binary Search Pattern (YouTube Series)**.
+
+This folder completes the **Binary Search Pattern Phase** of the DSA journey.
+
+* * *
+
+## 🚀 What’s Next
+
+*   Practice these Binary Search problems on coding platforms (LeetCode, GFG, etc.)
+
+*   Move to the **next DSA pattern**
+
+*   Focus on applying Binary Search thinking in unfamiliar problems
+
+
+Binary Search pattern: **COMPLETED.**
