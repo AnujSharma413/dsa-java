@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.slope_or_bitonic_search;
 /**
  * Problem:
  * Find a peak element in an array.

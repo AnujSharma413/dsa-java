@@ -1,16 +1,16 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.boundary_search;
 
-public class FirstOccurrence {
+public class LastOccurrence {
     /**
-     * Problem: First Occurrence of an Element in Sorted Array
+     * Problem: Last Occurrence of an Element in Sorted Array
      * Time Complexity: O(log n)
      * Space Complexity: O(1)
      */
-    static int firstOccurrence(int[] arr,int target){
+    static int lastOccurrence(int[] arr, int target){
 
         int start = 0;
         int end = arr.length-1;
-        int res = -1;  // stores first occurrence index
+        int res = -1;  // stores last occurrence index
 
         while(start <= end){
 
@@ -18,8 +18,8 @@ public class FirstOccurrence {
 
             if(arr[mid] == target){
                 res = mid;  // store answer
-                end = mid-1;  // move left to find first occurrence
-            }else if(arr[mid] < target){
+                start = mid + 1;  // move right to find last occurrence
+            }else if (arr[mid] < target){
                 start = mid + 1;
             }else{
                 end = mid - 1;
@@ -27,10 +27,9 @@ public class FirstOccurrence {
         }
         return res;
     }
-
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 2, 3, 4, 5};
         int target = 2;
-        System.out.println(firstOccurrence(arr,target));
+        System.out.println(lastOccurrence(arr,target));
     }
 }

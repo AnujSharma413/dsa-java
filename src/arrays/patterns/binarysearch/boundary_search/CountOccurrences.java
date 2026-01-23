@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.boundary_search;
 
 public class CountOccurrences {
     /**

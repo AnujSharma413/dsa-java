@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.classic_search;
 
 public class OrderNotKnownBinarySearch {
     /**

@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.rotated_sorted_array;
 
 public class RotationCount {
     /**

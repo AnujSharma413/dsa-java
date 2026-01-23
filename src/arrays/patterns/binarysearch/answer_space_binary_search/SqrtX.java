@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.answer_space_binary_search;
 
 public class SqrtX {
     /**

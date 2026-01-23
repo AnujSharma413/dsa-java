@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.slope_or_bitonic_search;
 /**
  * Problem:
  * Find the maximum element in a Bitonic Array.

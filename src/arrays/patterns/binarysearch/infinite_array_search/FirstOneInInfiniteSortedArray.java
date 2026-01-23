@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch;
+package arrays.patterns.binarysearch.infinite_array_search;
 /**
     Problem:
          Find first 1 in Infinite Binary Sorted Array.
@@ -8,7 +8,7 @@ package arrays.patterns.binarysearch;
          - Overall: O(log n)
     Space Complexity: O(1)
 */
-public class First1InInfiniteSortedArray {
+public class FirstOneInInfiniteSortedArray {
     // Modified Binary Search to find FIRST occurrence of target
     static int binarySearchModified(int[] arr,int start,int end,int target){
         int res = -1;
