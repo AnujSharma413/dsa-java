@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch.classic_search;
+package patterns.binarysearch.classic_search;
 
 public class BinarySearch {
     /**

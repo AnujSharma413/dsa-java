@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch.infinite_array_search;
+package patterns.binarysearch.infinite_array_search;
 /*
     Problem:
     Find the position of an element in an Infinite Sorted Array.

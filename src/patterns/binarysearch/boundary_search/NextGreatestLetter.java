@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch.boundary_search;
+package patterns.binarysearch.boundary_search;
 
 public class NextGreatestLetter {
     /**

@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch.answer_space_binary_search;
+package patterns.binarysearch.answer_space_binary_search;
 /**
  * Problem:
  * Find the element in a sorted array which has the minimum

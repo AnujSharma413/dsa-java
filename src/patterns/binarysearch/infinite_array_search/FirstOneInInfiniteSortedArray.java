@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch.infinite_array_search;
+package patterns.binarysearch.infinite_array_search;
 /**
     Problem:
          Find first 1 in Infinite Binary Sorted Array.

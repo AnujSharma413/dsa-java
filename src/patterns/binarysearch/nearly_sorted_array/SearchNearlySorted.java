@@ -1,4 +1,4 @@
-package arrays.patterns.binarysearch.nearly_sorted_array;
+package patterns.binarysearch.nearly_sorted_array;
 
 public class SearchNearlySorted {
     /**

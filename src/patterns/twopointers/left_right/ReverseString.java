@@ -1,4 +1,4 @@
-package arrays.patterns.twopointers.left_right_pointer;
+package patterns.twopointers.left_right;
 import java.util.Arrays;
 
 /**

@@ -1,4 +1,4 @@
-package arrays.patterns.twopointers.left_right_pointer;
+package patterns.twopointers.left_right;
 /**
  * Problem:
  * Check whether a given string is a valid palindrome.
