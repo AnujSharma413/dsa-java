@@ -12,7 +12,8 @@ import java.util.ArrayList;
  * 3. Find last index of target
  * 4. Find ALL indices using:
  *    a) Global list (side effects)
- *    b) Passing ArrayList as argument (pure recursion)
+ *    b) Passing ArrayList as argument
+ *    c) Returning ArrayList from recursive calls (PURE FUNCTIONAL)
  *
  * Core Recursion Idea:
  * - Reduce problem size by moving index
@@ -20,7 +21,10 @@ import java.util.ArrayList;
  */
 public class LinearSearchRecursive {
 
-     // 1. CHECK IF ELEMENT EXISTS (BOOLEAN):
+    /* ---------------------------------------------------
+       1️⃣ CHECK IF ELEMENT EXISTS (BOOLEAN)
+       --------------------------------------------------- */
+
     static boolean find(int[] arr, int target) {
 
         // Edge case: empty array
@@ -33,19 +37,20 @@ public class LinearSearchRecursive {
 
     static boolean helperFind(int[] arr, int target, int index) {
 
-        // Base Condition:
-        // Index moved outside array
+        // Base Condition: index out of bounds
         if (index == arr.length) {
             return false;
         }
 
-        // If found at current index → true
-        // Else continue recursion
+        // Check current index OR search in remaining array
         return arr[index] == target
                 || helperFind(arr, target, index + 1);
     }
 
-    // 2. FIND FIRST INDEX OF TARGET:
+    /* ---------------------------------------------------
+       2️⃣ FIND FIRST INDEX OF TARGET
+       --------------------------------------------------- */
+
     static int findIndex(int[] arr, int target) {
 
         if (arr.length == 0) {
@@ -57,13 +62,11 @@ public class LinearSearchRecursive {
 
     static int helperFirstIndex(int[] arr, int target, int index) {
 
-        // Base Condition:
-        // Entire array searched
+        // Base Condition
         if (index == arr.length) {
             return -1;
         }
 
-        // Return immediately when found
         if (arr[index] == target) {
             return index;
         }
@@ -71,22 +74,23 @@ public class LinearSearchRecursive {
         return helperFirstIndex(arr, target, index + 1);
     }
 
+    /* ---------------------------------------------------
+       3️⃣ FIND LAST INDEX OF TARGET
+       --------------------------------------------------- */
 
-    // 3. FIND LAST INDEX OF TARGET:
     static int findIndexLast(int[] arr, int target) {
 
         if (arr.length == 0) {
             return -1;
         }
 
-        // Start searching from end
+        // Start from last index
         return helperLastIndex(arr, target, arr.length - 1);
     }
 
     static int helperLastIndex(int[] arr, int target, int index) {
 
-        // Base Condition:
-        // Crossed array start
+        // Base Condition
         if (index < 0) {
             return -1;
         }
@@ -98,18 +102,19 @@ public class LinearSearchRecursive {
         return helperLastIndex(arr, target, index - 1);
     }
 
+    /* ---------------------------------------------------
+       4️⃣ FIND ALL INDICES (USING GLOBAL LIST)
+       ❌ Not recommended (side effects)
+       --------------------------------------------------- */
 
-    // 4. FIND ALL INDICES (USING GLOBAL LIST):
     static ArrayList<Integer> list = new ArrayList<>();
 
     static void findAllIndex(int[] arr, int target, int index) {
 
-        // Base Condition
         if (index == arr.length) {
             return;
         }
 
-        // Add index if match found
         if (arr[index] == target) {
             list.add(index);
         }
@@ -117,15 +122,17 @@ public class LinearSearchRecursive {
         findAllIndex(arr, target, index + 1);
     }
 
+    /* ---------------------------------------------------
+       5️⃣ FIND ALL INDICES (PASSING LIST AS ARGUMENT)
+       ✔ Better approach
+       --------------------------------------------------- */
 
-    // 5. FIND ALL INDICES (PASSING LIST AS ARGUMENT):
-    static ArrayList<Integer> findAllIndexAL(
+    static ArrayList<Integer> findAllIndexAL1(
             int[] arr,
             int target,
             int index,
             ArrayList<Integer> list) {
 
-        // Base Condition
         if (index == arr.length) {
             return list;
         }
@@ -134,23 +141,57 @@ public class LinearSearchRecursive {
             list.add(index);
         }
 
-        return findAllIndexAL(arr, target, index + 1, list);
+        return findAllIndexAL1(arr, target, index + 1, list);
+    }
+
+    /* ---------------------------------------------------
+       6️⃣ FIND ALL INDICES (RETURN LIST FROM EACH CALL)
+       ⭐ MOST IMPORTANT PATTERN
+       --------------------------------------------------- */
+
+    static ArrayList<Integer> findAllIndexAL2(
+            int[] arr,
+            int target,
+            int index) {
+
+        // Create list for THIS function call
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // Base Condition
+        if (index == arr.length) {
+            return list;
+        }
+
+        // Add current index if it matches
+        if (arr[index] == target) {
+            list.add(index);
+        }
+
+        // Get result from remaining calls
+        ArrayList<Integer> ansFromBelowCalls =
+                findAllIndexAL2(arr, target, index + 1);
+
+        // Combine current answer with below calls
+        list.addAll(ansFromBelowCalls);
+
+        return list;
     }
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 5, 5, 3, 7, 12};
+        int[] arr = {1, 2, 3, 5, 5, 7};
         int target = 5;
 
-        System.out.println(find(arr, target));          // true
-        System.out.println(findIndex(arr, target));     // 2
-        System.out.println(findIndexLast(arr, target)); // 3
+        System.out.println(find(arr, target));            // true
+        System.out.println(findIndex(arr, target));       // 3
+        System.out.println(findIndexLast(arr, target));   // 4
 
         findAllIndex(arr, target, 0);
-        System.out.println(list); // [2, 3]
+        System.out.println(list); // [3, 4]
 
         ArrayList<Integer> temp = new ArrayList<>();
-        ArrayList<Integer> ans = findAllIndexAL(arr, target, 0, temp);
-        System.out.println(ans);  // [2, 3]
+        System.out.println(findAllIndexAL1(arr, target, 0, temp)); // [3, 4]
+
+        System.out.println(findAllIndexAL2(arr, target, 0));       // [3, 4]
     }
 }
