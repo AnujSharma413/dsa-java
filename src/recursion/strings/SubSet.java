@@ -1,63 +1,101 @@
 package recursion.strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SubSet {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 3};
+        int[] arr = {1, 2, 2};
 
-        // Calling subset function
-        List<List<Integer>> ans = subset(arr);
+        // calling subset method for duplicates
+        List<List<Integer>> ans = subsetDuplicate(arr);
 
-        // Printing all subsets
+        // printing all subsets
         for (List<Integer> list : ans) {
             System.out.println(list);
         }
     }
 
     /*
-        This method generates all subsets of an array.
-
-        Idea:
-        For every number in the array
-        copy existing subsets and add the number to them
+        Normal subset generation
+        Works only when array has unique elements
     */
-
     static List<List<Integer>> subset(int[] arr) {
 
-        // outer list will store all subsets
         List<List<Integer>> outer = new ArrayList<>();
 
-        // first subset is always empty
+        // start with empty subset
         outer.add(new ArrayList<>());
 
-        // iterate through every number in the array
         for (int num : arr) {
 
-            // current size of outer list
             int n = outer.size();
 
-            /*
-                we only iterate through the subsets
-                that existed before adding current number
-            */
             for (int i = 0; i < n; i++) {
 
-                // copy the existing subset
+                // copy existing subset
                 List<Integer> internal = new ArrayList<>(outer.get(i));
 
-                // add current number to copied subset
+                // add current element
                 internal.add(num);
 
-                // add new subset into outer list
+                // store new subset
                 outer.add(internal);
             }
         }
 
-        // return all subsets
+        return outer;
+    }
+
+    /*
+        Subset generation with duplicate handling
+    */
+    static List<List<Integer>> subsetDuplicate(int[] arr) {
+
+        // sorting is required to detect duplicates
+        Arrays.sort(arr);
+
+        List<List<Integer>> outer = new ArrayList<>();
+
+        // first subset
+        outer.add(new ArrayList<>());
+
+        int start = 0;
+        int end = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            start = 0;
+
+            /*
+                if current element is same as previous
+                we only extend subsets created in previous iteration
+            */
+            if (i > 0 && arr[i] == arr[i - 1]) {
+                start = end + 1;
+            }
+
+            // store previous end
+            end = outer.size() - 1;
+
+            int n = outer.size();
+
+            for (int j = start; j < n; j++) {
+
+                // copy existing subset
+                List<Integer> internal = new ArrayList<>(outer.get(j));
+
+                // add current number
+                internal.add(arr[i]);
+
+                // add new subset
+                outer.add(internal);
+            }
+        }
+
         return outer;
     }
 }
