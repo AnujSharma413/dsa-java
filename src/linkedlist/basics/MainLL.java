@@ -1,10 +1,10 @@
 package linkedlist.basics;
 
 /*
-    Driver class to test Linked List operations
+    Driver class to test Singly Linked List operations
 */
 
-public class Main {
+public class MainLL {
 
     public static void main(String[] args) {
 
@@ -22,22 +22,16 @@ public class Main {
         // inserting at index
         list.insert(100,3);
 
-        // display list
+        System.out.println("Initial List:");
         list.display();
 
-        // delete first node
-        System.out.println(list.deleteFirst());
-
+        System.out.println("\nDeleted First Node: " + list.deleteFirst());
         list.display();
 
-        // delete last node
-        System.out.println(list.deleteLast());
-
+        System.out.println("\nDeleted Last Node: " + list.deleteLast());
         list.display();
 
-        // delete node at index
-        System.out.println(list.delete(2));
-
+        System.out.println("\nDeleted Node at Index 2: " + list.delete(2));
         list.display();
     }
 }
