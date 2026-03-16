@@ -37,16 +37,12 @@ public class LL {
      */
     public void insertFirst(int val){
 
-        // create new node
         Node node = new Node(val);
 
-        // new node points to current head
         node.next = head;
 
-        // move head to new node
         head = node;
 
-        // if list was empty, tail also points to head
         if(tail == null){
             tail = head;
         }
@@ -60,7 +56,6 @@ public class LL {
      */
     public void insertLast(int val){
 
-        // if list is empty, use insertFirst
         if(tail == null){
             insertFirst(val);
             return;
@@ -68,10 +63,8 @@ public class LL {
 
         Node node = new Node(val);
 
-        // attach new node after tail
         tail.next = node;
 
-        // move tail to new node
         tail = node;
 
         size++;
@@ -79,13 +72,6 @@ public class LL {
 
     /*
         Insert element at specific index
-        Example:
-        10 -> 20 -> 30
-
-        insert(15,1)
-
-        Result:
-        10 -> 15 -> 20 -> 30
      */
     public void insert(int val,int index){
 
@@ -99,14 +85,12 @@ public class LL {
             return;
         }
 
-        // traverse to node before index
         Node temp = head;
 
         for(int i = 1; i < index; i++){
             temp = temp.next;
         }
 
-        // create node and link it
         Node newNode = new Node(val,temp.next);
 
         temp.next = newNode;
@@ -115,13 +99,35 @@ public class LL {
     }
 
     /*
-        Delete first node
+        Insert using recursion
+
         Example:
-        10 -> 20 -> 30
+        List: 17 -> 8 -> 2 -> 3 -> 100 -> 99
+        insertRec(22,2)
 
-        becomes
+        Result:
+        17 -> 8 -> 22 -> 2 -> 3 -> 100 -> 99
+     */
 
-        20 -> 30
+    public void insertRec(int val, int index){
+        head = insertRec(val,index,head);
+    }
+
+    private Node insertRec(int val,int index,Node node){
+
+        if(index == 0){
+            Node temp = new Node(val,node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(val,index-1,node.next);
+
+        return node;
+    }
+
+    /*
+        Delete first node
      */
     public int deleteFirst(){
 
@@ -131,10 +137,8 @@ public class LL {
 
         int val = head.value;
 
-        // move head forward
         head = head.next;
 
-        // if list becomes empty
         if(head == null){
             tail = null;
         }
@@ -153,7 +157,6 @@ public class LL {
             return deleteFirst();
         }
 
-        // get second last node
         Node secondLast = get(size-2);
 
         int val = tail.value;
@@ -184,7 +187,6 @@ public class LL {
 
         int val = prev.next.value;
 
-        // skip the node
         prev.next = prev.next.next;
 
         size--;
@@ -232,7 +234,7 @@ public class LL {
 
         Node temp = head;
 
-        while(temp != null) {
+        while(temp != null){
 
             System.out.print(temp.value + " -> ");
 

@@ -33,5 +33,11 @@ public class MainLL {
 
         System.out.println("\nDeleted Node at Index 2: " + list.delete(2));
         list.display();
+
+        // inserting using recursion
+        System.out.println("\nInserted Node at index 2 using recursion:");
+        list.insertRec(22,2);
+
+        list.display();
     }
 }
