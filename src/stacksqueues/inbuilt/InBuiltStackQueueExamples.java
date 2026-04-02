@@ -1,4 +1,4 @@
-package stacksqueues;
+package stacksqueues.inbuilt;
 
 import java.util.*;
 
