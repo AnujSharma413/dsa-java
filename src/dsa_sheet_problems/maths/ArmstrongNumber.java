@@ -1,4 +1,4 @@
-package maths;
+package dsa_sheet_problems.maths;
 
 /**
  * Problem: Check if a 3-digit number is an Armstrong Number.

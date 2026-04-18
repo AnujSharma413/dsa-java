@@ -1,4 +1,4 @@
-package maths;
+package dsa_sheet_problems.maths;
 
 /**
  * Problem: Find the Greatest Common Divisor (GCD) of two numbers.

@@ -1,4 +1,4 @@
-package maths;
+package dsa_sheet_problems.maths;
 
 /**
  * Problem: Count the number of digits in an integer.

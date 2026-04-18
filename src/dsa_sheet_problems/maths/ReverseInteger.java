@@ -1,4 +1,4 @@
-package maths;
+package dsa_sheet_problems.maths;
 
 /**
  * Problem: Reverse a signed 32-bit integer.

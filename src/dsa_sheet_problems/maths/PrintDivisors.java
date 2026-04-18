@@ -1,4 +1,4 @@
-package maths;
+package dsa_sheet_problems.maths;
 
 import java.util.ArrayList;
 import java.util.Collections;
