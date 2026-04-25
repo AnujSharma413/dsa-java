@@ -1,4 +1,4 @@
-package dsa_sheet_problems.sorting;
+package dsa_sheet_problems.sorting.easy;
 
 /**
  * Problem: Bubble Sort Implementation
