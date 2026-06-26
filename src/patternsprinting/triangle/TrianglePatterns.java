@@ -16,6 +16,12 @@ import java.util.Scanner;
  * 8. Inverted Star Triangle
  * 9. Inverted Number Triangle
  * 10. Inverted Alphabet Triangle
+ * 11. Right Aligned Star Triangle
+ * 12. Right Aligned Inverted Star Triangle
+ * 13. Right Aligned Number Triangle
+ * 14. Right Aligned Alphabet Triangle
+ * 15. Half Diamond Star Pattern
+ * 16. Half Diamond Number Pattern
  */
 public class TrianglePatterns {
 
@@ -211,6 +217,200 @@ public class TrianglePatterns {
         }
     }
 
+    /*
+     * Pattern 11
+     * Right Aligned Star Triangle
+     *
+     *     *
+     *    **
+     *   ***
+     *  ****
+     * *****
+     */
+    static void pattern11(int n) {
+        for (int i = 1; i <= n; i++) {
+
+            // Print leading spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 12
+     * Right Aligned Inverted Star Triangle
+     *
+     * *****
+     *  ****
+     *   ***
+     *    **
+     *     *
+     */
+    static void pattern12(int n) {
+        for (int i = 1; i <= n; i++) {
+
+            // Print leading spaces
+            for (int j = 1; j <= i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 13
+     * Right Aligned Number Triangle
+     *
+     *     1
+     *    12
+     *   123
+     *  1234
+     * 12345
+     */
+    static void pattern13(int n) {
+        for (int i = 1; i <= n; i++) {
+
+            int x = 1;
+
+            // Print leading spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print numbers
+            for (int j = 1; j <= i; j++) {
+                System.out.print(x);
+                x++;
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 14
+     * Right Aligned Alphabet Triangle
+     *
+     *     A
+     *    AB
+     *   ABC
+     *  ABCD
+     * ABCDE
+     */
+    static void pattern14(int n) {
+        for (int i = 1; i <= n; i++) {
+
+            char ch = 'A';
+
+            // Print leading spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print alphabets
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch);
+                ch++;
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 15
+     * Half Diamond Star Pattern
+     *
+     * *
+     * **
+     * ***
+     * ****
+     * *****
+     * ****
+     * ***
+     * **
+     * *
+     */
+    static void pattern15(int n) {
+
+        // Upper Triangle
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // Lower Triangle
+        for (int i = 1; i <= n - 1; i++) {
+
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 16
+     * Half Diamond Number Pattern
+     *
+     * 1
+     * 22
+     * 333
+     * 4444
+     * 55555
+     * 4444
+     * 333
+     * 22
+     * 1
+     */
+    static void pattern16(int n) {
+
+        int x = 0;
+
+        // Upper Triangle
+        for (int i = 1; i <= n; i++) {
+
+            x++;
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(x);
+            }
+
+            System.out.println();
+        }
+
+        // Lower Triangle
+        for (int i = 1; i <= n - 1; i++) {
+
+            x--;
+
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(x);
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -246,6 +446,24 @@ public class TrianglePatterns {
         System.out.println();
 
         pattern10(n);
+        System.out.println();
+
+        pattern11(n);
+        System.out.println();
+
+        pattern12(n);
+        System.out.println();
+
+        pattern13(n);
+        System.out.println();
+
+        pattern14(n);
+        System.out.println();
+
+        pattern15(n);
+        System.out.println();
+
+        pattern16(n);
 
         sc.close();
     }
