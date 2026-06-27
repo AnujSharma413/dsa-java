@@ -22,7 +22,20 @@ import java.util.Scanner;
  * 14. Right Aligned Alphabet Triangle
  * 15. Half Diamond Star Pattern
  * 16. Half Diamond Number Pattern
+ * 17. Full Pyramid Pattern
+ * 18. Inverted Full Pyramid Pattern
+ * 19. Diamond Star Pattern
+ * 20. Hourglass Star Pattern
+ *
+ * Concepts Used:
+ * - Nested Loops
+ * - Character Arithmetic
+ * - Space Handling
+ * - Pattern Printing
+ * - Pyramid Logic
+ * - Diamond Patterns
  */
+
 public class TrianglePatterns {
 
     /*
@@ -411,6 +424,152 @@ public class TrianglePatterns {
         }
     }
 
+    /*
+     * Pattern 17
+     * Full Pyramid Pattern
+     *
+     *     *
+     *    ***
+     *   *****
+     *  *******
+     * *********
+     */
+    static void pattern17(int n) {
+
+        for (int i = 1; i <= n; i++) {
+
+            // Print leading spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 18
+     * Inverted Full Pyramid Pattern
+     *
+     * *********
+     *  *******
+     *   *****
+     *    ***
+     *     *
+     */
+    static void pattern18(int n) {
+
+        for (int i = 1; i <= n; i++) {
+
+            // Print leading spaces
+            for (int j = 1; j <= i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int j = 1; j <= 2 * (n - i) + 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 19
+     * Diamond Star Pattern
+     *
+     *     *
+     *    ***
+     *   *****
+     *  *******
+     * *********
+     *  *******
+     *   *****
+     *    ***
+     *     *
+     */
+    static void pattern19(int n) {
+
+        // Upper Pyramid
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // Lower Pyramid
+        for (int i = 1; i <= n - 1; i++) {
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= 2 * (n - i) - 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /*
+     * Pattern 20
+     * Hourglass Star Pattern
+     *
+     * *********
+     *  *******
+     *   *****
+     *    ***
+     *     *
+     *    ***
+     *   *****
+     *  *******
+     * *********
+     */
+    static void pattern20(int n) {
+
+        // Upper Inverted Pyramid
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = 1; j <= i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= 2 * (n - i) + 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // Lower Pyramid
+        for (int i = 2; i <= n; i++) {
+
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -464,6 +623,19 @@ public class TrianglePatterns {
         System.out.println();
 
         pattern16(n);
+        System.out.println();
+
+        pattern17(n);
+        System.out.println();
+
+        pattern18(n);
+        System.out.println();
+
+        pattern19(n);
+        System.out.println();
+
+        pattern20(n);
+        System.out.println();
 
         sc.close();
     }
