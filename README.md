@@ -1,50 +1,342 @@
-# 🚀 My DSA Odyssey: From Loops to Linked Lists
+# 🚀 Java DSA Journey | Solving Problems One Commit at a Time
 
-Welcome to my Java-based Data Structures and Algorithms journey! This repository is a living document of my daily grind, documenting how I went from struggling with basic arrays to implementing complex recursive logic and optimized data structures.
+Welcome to my Java Data Structures and Algorithms repository.
 
-## 🗺️ The Roadmap (Where I've Been)
-
-I started this repo with a simple goal: **Master the fundamentals.** Here is how my journey has evolved:
-
-### 📍 Phase 1: The Foundation (Arrays & Patterns)
-- **The Start:** I began with basic array manipulations and logic-building through star patterns.
-- **Key Milestone:** Mastered **Cyclic Sort**—my first "aha!" moment with $O(n)$ sorting logic.
-
-### 📍 Phase 2: Thinking Recursively
-- Moved into the world of **Recursion**. 
-- Built a recursive permutation generator to understand how the call stack manages state. This shifted my perspective from iterative loops to functional thinking.
-
-### 📍 Phase 3: Dynamic Data (Linked Lists)
-- Currently deep-diving into **Linked Lists**. 
-- Solved classic challenges like **Rotate List (LeetCode 61)** and node reversals.
-- Learning to manage pointers and memory efficiently without the safety net of array indices.
-
-### 📍 Phase 4: Linear Power (Stacks & Queues)
-- Integrated Java's inbuilt `Stack`, `Queue`, and `Deque` to solve real-world processing problems.
-- Focused on understanding when to use a LIFO vs. FIFO approach.
-
-## 📂 Folder-wise Breakdown
-
-| Directory | What's Inside? | Focus Area |
-| :--- | :--- | :--- |
-| `arrays/` | Sorting, Searching, Subarrays | Logic & Time Complexity |
-| `patterns/` | Nested Loops, Geometry | Spatial Reasoning |
-| `recursion/` | Permutations, Subsets, Backtracking | Stack Depth & Base Cases |
-| `linkedlist/` | Rotation, Cycle Detection, Reversal | Pointer Manipulation |
-| `stacksqueues/` | Custom & Inbuilt implementations | Buffer & Order Management |
-| `strings/basics/` | Character mapping, Palindromes | Data Parsing |
-
-## 🛠️ Tech Toolbox
-- **Language:** Java 17 (The choice for enterprise-level DSA)
-- **Environment:** IntelliJ IDEA / VS Code
-- **Methodology:** Solve on LeetCode -> Implement locally -> Optimize complexity.
-
-## 🎯 What's Next? (The Horizon)
-The journey is far from over. My next targets are:
-- [ ] **Trees & Graphs:** Moving from linear to non-linear data structures.
-- [ ] **Dynamic Programming:** Conquering the fear of overlapping subproblems.
-- [ ] **Heaps & Maps:** Optimizing lookups and priority-based tasks.
-- [ ] **100+ LeetCode Milestone:** Aiming for consistency over intensity.
+This repository documents my journey of learning DSA from scratch, solving problems consistently, and improving my problem-solving skills using Java. Every folder represents concepts I learned, problems I solved, and the progression from basic programming logic to optimized algorithms.
 
 ---
-*"The best time to plant a tree was 20 years ago. The second best time is now."* **Maintained with ❤️ by Anuj Sharma**
+
+# 📈 Learning Journey
+
+## 🌱 Phase 1 — Programming Fundamentals
+Started with:
+- Pattern Printing
+- Basic Arrays
+- Loops & Conditions
+- Functions
+- Basic Java Programming
+
+These topics helped me develop logical thinking before moving into DSA.
+
+---
+
+## 🔄 Phase 2 — Arrays & Searching
+
+Worked on:
+
+- Array Traversal
+- Maximum & Minimum
+- Reverse Array
+- Prefix Sum
+- Two Sum
+- Merge Sorted Arrays
+- Cyclic Sort
+- Binary Search
+- Searching in 2D Matrix
+- Sliding Window Basics
+
+Learned:
+- Time Complexity Analysis
+- Space Optimization
+- In-place Algorithms
+
+---
+
+## 🧠 Phase 3 — Strings
+
+Practiced:
+
+- String Manipulation
+- Palindrome Problems
+- Character Frequency
+- StringBuilder
+- StringBuffer
+- String Reversal
+- String Mutation
+- Deletion Operations
+
+Focused on improving understanding of immutable vs mutable strings in Java.
+
+---
+
+## 🔁 Phase 4 — Recursion
+
+Implemented recursive solutions for:
+
+- Factorial
+- Fibonacci
+- Reverse String
+- Palindrome Check
+- Subsets
+- Permutations
+
+This phase helped me understand:
+- Call Stack
+- Backtracking
+- Recursive Thinking
+
+---
+
+## 🔗 Phase 5 — Linked Lists
+
+Solved problems involving:
+
+- Rotate List (LeetCode 61)
+- Reversal
+- Traversal
+- Pointer Manipulation
+
+Focused on writing clean pointer-based solutions.
+
+---
+
+## 📚 Phase 6 — Stacks & Queues
+
+Implemented and solved problems using:
+
+- Java Stack
+- Queue
+- Deque
+- Valid Parentheses (LeetCode 20)
+- Queue using Stacks (LeetCode 232)
+
+Learned when to apply:
+- LIFO
+- FIFO
+
+---
+
+## 🎯 Phase 7 — DSA Sheet Practice
+
+Created a separate section dedicated to solving popular DSA Sheet problems.
+
+Topics include:
+
+- Arrays
+- Hashing
+- Sorting
+- Recursion
+- Maths
+- Stack & Queue Problems
+
+Problems are solved using:
+- Brute Force
+- Better Approach
+- Optimal Approach
+
+whenever applicable.
+
+---
+
+## 💻 Phase 8 — ByteXL Practice
+
+Solutions completed during ByteXL training.
+
+Includes:
+
+### Arrays
+- Basic Array Problems
+- Intermediate Problems
+- Sliding Window
+
+### Strings
+- Basic String Problems
+
+### StringBuilder & StringBuffer
+- Mutation
+- Deletion
+- Reversal
+
+---
+
+# 📂 Repository Structure
+
+```
+src
+│
+├── arrays
+│
+├── bytexl
+│   ├── arrays
+│   ├── moderndsa1
+│   │      └── arrays
+│   ├── strings
+│   └── stringbuilderAndbuffer
+│
+├── dsa_sheet_problems
+│   ├── arrays
+│   ├── hashing
+│   ├── maths
+│   ├── recursion
+│   ├── sorting
+│   └── stackqueues
+│
+├── linkedlist
+│
+├── patterns
+│   ├── binarysearch
+│   ├── cyclic_sort
+│   └── twopointers
+│
+├── patternsprinting
+│
+├── recursion
+│
+├── stacksqueues
+│
+└── strings
+    └── basics
+```
+
+---
+
+# 📌 Topics Covered
+
+## Java Fundamentals
+
+- Variables
+- Loops
+- Functions
+- Arrays
+- Strings
+- Pattern Printing
+
+---
+
+## Searching
+
+- Binary Search
+- 2D Matrix Search
+
+---
+
+## Sorting
+
+- Cyclic Sort
+- Merge Sorted Array
+
+---
+
+## Two Pointer Technique
+
+- Two Pointer Problems
+- Sliding Window
+
+---
+
+## Strings
+
+- Character Operations
+- StringBuilder
+- StringBuffer
+- Palindrome
+- Reverse String
+
+---
+
+## Recursion
+
+- Basic Recursion
+- Backtracking
+- Permutations
+- Palindrome
+
+---
+
+## Linked List
+
+- Rotation
+- Traversal
+- Reversal
+
+---
+
+## Stack & Queue
+
+- Stack
+- Queue
+- Deque
+- Parentheses Validation
+- Queue using Stacks
+
+---
+
+## Hashing
+
+- Frequency Counting
+- HashMap Problems
+
+---
+
+## Mathematics
+
+- Basic Number Theory Problems
+
+---
+
+# 🛠 Tech Stack
+
+- Java 17
+- IntelliJ IDEA
+- Git
+- GitHub
+- LeetCode
+- ByteXL Practice
+
+---
+
+# 🎯 Current Progress
+
+- ✅ Arrays
+- ✅ Strings
+- ✅ Pattern Problems
+- ✅ Binary Search
+- ✅ Two Pointer
+- ✅ Sliding Window
+- ✅ Recursion
+- ✅ Linked List
+- ✅ Stack
+- ✅ Queue
+- ✅ Hashing
+- ✅ Maths
+- ✅ Sorting
+- ✅ DSA Sheet Problems
+- ✅ ByteXL Practice
+
+---
+
+# 🚀 Next Goals
+
+- [ ] Trees
+- [ ] Binary Search Trees
+- [ ] Heaps
+- [ ] Greedy Algorithms
+- [ ] Graphs
+- [ ] Dynamic Programming
+- [ ] Tries
+- [ ] Segment Trees
+- [ ] Advanced Sliding Window
+- [ ] 250+ LeetCode Problems
+- [ ] Systematic Revision of All Topics
+
+---
+
+# 📊 Repository Goals
+
+✔ Learn DSA from fundamentals
+
+✔ Build strong problem-solving skills
+
+✔ Write clean and optimized Java code
+
+✔ Maintain consistent GitHub commits
+
+✔ Prepare for Software Engineering interviews
+
+---
+
+> **"Consistency beats intensity. One problem solved today is one less problem to fear tomorrow."**
+
+### ⭐ If you find this repository helpful, consider giving it a star!
+
+**Maintained with ❤️ by Anuj Sharma**
