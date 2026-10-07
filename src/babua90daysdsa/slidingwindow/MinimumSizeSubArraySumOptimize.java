@@ -1,0 +1,30 @@
+package babua90daysdsa.slidingwindow;
+
+public class MinimumSizeSubArraySumOptimize {
+    static int minSubArrayLen(int target, int[] nums) {
+       int size = Integer.MAX_VALUE;
+       int sum = 0;
+       int i = 0;
+       int j = 0;
+
+       while(j < nums.length){
+           sum = sum + nums[j];
+
+           while(sum >= target){
+               size = Math.min(size, j - i + 1);
+               sum = sum - nums[i];
+               i++;
+           }
+
+           j++;
+       }
+
+       return size == Integer.MAX_VALUE ? 0 : size;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {2,3,1,6,4,3};
+        int target = 7;
+        System.out.println(minSubArrayLen(target,nums));
+    }
+}
